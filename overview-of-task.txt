@@ -1,0 +1,23 @@
+step1: created github account
+
+step2: created jenkins locally
+
+step3: created Docker desktop for windows 
+
+step4: created minikube(k8s cluster) in windows and used virtual machine manager as virtualBox(oracle)
+
+step5: Took simple Node.js application code for a "Hello, World!" and pushed to github repo and configured 
+       webhook for continous integration whenever a changes pushed(used ngrock this enables users to expose local 
+       development server to the internet with minimal effort)
+
+step6: In jenkins instelled required plugins and created new pipeline job, used declarative pipeline and 
+       created jenkinsfile and made all the stages to be run and execute properly.
+
+step7: Built customised docker image and pushed to dockerhub
+
+step8:started the Minikube Kubernetes cluster and created Kubernetes manifest files for deployment and service resources. 
+      Deployed Docker image to the Kubernetes cluster, and made application accessible.
+
+
+
+set up of a local development environment and CI/CD pipeline for your Node.js application, and made sure this workflow allows us to automate all the process.
