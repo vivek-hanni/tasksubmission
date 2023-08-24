@@ -10,8 +10,8 @@ pipeline {
         stage('IMAGE') {
             steps {
                 script {
-                    def dockerTag = "1.${env.BUILD_NUMBER}" // Create a unique tag based on build number
-                    bat "docker build -t hannidocker/nodeapp:$dockerTag ." // Use the generated tag
+                    def dockerTag = "1.${env.BUILD_NUMBER}" 
+                    bat "docker build -t hannidocker/nodeapp:$dockerTag ." 
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
               withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerhubpwd')]) {
                   bat 'docker login -u hannidocker -p %dockerhubpwd%'
                   script {
-                      def dockerTag = "1.${env.BUILD_NUMBER}" // Reuse the same generated tag
+                      def dockerTag = "1.${env.BUILD_NUMBER}" 
                       bat "docker push hannidocker/nodeapp:$dockerTag"
                   }
               }
